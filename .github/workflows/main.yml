@@ -43,9 +43,9 @@ jobs:
           # Path to the Dockerfile
           file: ./src/Dockerfile
           push: true
-          tags:
+          tags: |
             tomwell/api-product:latest
-            tomwell/api-product:${{github.run_number}}
+            tomwell/api-product:v${{github.run_number}}
 
   CD:
     runs-on: ubuntu-latest
