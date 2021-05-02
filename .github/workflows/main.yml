@@ -49,7 +49,7 @@ jobs:
 
   CD:
     runs-on: ubuntu-latest
-    needs: [CLI]
+    needs: [CI]
     steps:
       - uses: action/checkout@v2
       
