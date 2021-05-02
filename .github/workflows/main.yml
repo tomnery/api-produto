@@ -45,5 +45,5 @@ jobs:
           push: true
           tags:
             tomwell/api-product:latest
-            tomwell/api-product:${{github.run_number}}
+            tomwell/api-product:v${{github.run_number}}
       
