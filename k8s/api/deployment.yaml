@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: apiprod
+spec:
+  selector:
+    matchLabels:
+      app: apiprod
+  template:
+    metadata:
+      labels:
+        app: apiprod
+    spec:
+      containers:
+        - name: apiprod
+          image: tomwell/api-product:v1
+          ports:
+            - containerPort: 8080
+          env:
+            - name: MONGODB_URI
+              value: mongodb://mongouser:mongopwd@localhost:27017/admin
+    
